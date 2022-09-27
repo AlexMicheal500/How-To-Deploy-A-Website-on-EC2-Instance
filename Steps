@@ -1,0 +1,19 @@
+To learn how to go about this use the link https://www.youtube.com/watch?v=YNL22VWgm9Q
+
+Summary: Prestashop.com/en will be hosted on AWS using 2 services which are:
+1. EC2 Instance
+2. S3 Service
+Steps:
+1. Create S3 bucket and object.
+2. Allow public access
+3. Create an EC2 instance.
+4. Ensure HTTP is added to the security group.
+5. Connect to SSH using putty
+6. In putty, import key pair downloaded from EC2 instance and use it for
+authentication
+7. In putty terminal, update Linux environment, install and start Apache.
+8. Change directory to /var/www/html.
+9. Copy URL and place it in putty terminal using the command wget to retrieve
+URL.
+10. Start Apache.
+
