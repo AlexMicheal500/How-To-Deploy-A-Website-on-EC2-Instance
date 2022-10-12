@@ -4,9 +4,9 @@ FOR WEBSITE TEMPLATES visit https://www.template.net/web-templates/php-templates
 
 Steps:
 1. Upload the zipped file to S3 bucket.
-2. Go to permission and click on bucker policy
+2. Go to permission and click on bucket policy
 3. Serach for awsb bucket policy on google and look for "aws bucket policy examples". Then look for "grant read only permission" and copy and paste 
-4. Then check if ythe se link is downloadable.
+4. Then check if the link is downloadable.
 5. Then we create ec2 and select a Amazon AMI
 6. Run the following commands:
  sudo su
@@ -18,3 +18,9 @@ Steps:
  service httpd start
  
  NOTE: Works mainly for index.html and not index.php
+ 
+ NOTE 2: To allocate your apache site to a poert, you visit https://www.techrepublic.com/article/how-to-use-nginx-as-a-reverse-proxy-for-apache/
+ 1. sudo nano /etc/apache2/ports.conf
+ 2. Change port 80 to any other p[ort number you desire.
+ 
+ NOTE 3: Multiple ports can be allocated to an apache webserver
