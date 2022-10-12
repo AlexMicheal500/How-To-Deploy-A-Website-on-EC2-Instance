@@ -1,19 +1,19 @@
 To learn how to go about this use the link https://www.youtube.com/watch?v=YNL22VWgm9Q
+The most accurate video is https://www.youtube.com/watch?v=OJDKJSiNZeAS5teps:
 
-Summary: Prestashop.com/en will be hosted on AWS using 2 services which are:
-1. EC2 Instance
-2. S3 Service
 Steps:
-1. Create S3 bucket and object.
-2. Allow public access
-3. Create an EC2 instance.
-4. Ensure HTTP is added to the security group.
-5. Connect to SSH using putty
-6. In putty, import key pair downloaded from EC2 instance and use it for
-authentication
-7. In putty terminal, update Linux environment, install and start Apache.
-8. Change directory to /var/www/html.
-9. Copy URL and place it in putty terminal using the command wget to retrieve
-URL.
-10. Start Apache.
-
+1. Upload the zipped file to S3 bucket.
+2. Go to permission and click on bucker policy
+3. Serach for awsb bucket policy on google and look for "aws bucket policy examples". Then look for "grant read only permission" and copy and paste 
+4. Then check if ythe se link is downloadable.
+5. Then we create ec2 and select a Amazon AMI
+6. Run the following commands:
+ sudo su
+ yum update
+ yum install httpd
+ cd /var/www/html
+ wget <link>
+ unzip <folder>
+ service httpd start
+ 
+ NOTE: Works mainly for index.html and not index.php
