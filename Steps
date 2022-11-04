@@ -15,6 +15,7 @@ Steps:
  cd /var/www/html
  wget <link>
  unzip <folder>
+ mv <folder>/*
  service httpd start
  
  NOTE: Works mainly for index.html and not index.php
